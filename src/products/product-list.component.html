@@ -19,7 +19,7 @@
 
     <div class="table-responsive">
       <table class="table" *ngIf="products.length">
-        <thead>
+        <thead >
           <tr>
             <th>
               <button class="btn btn-primary" (click)="toggleImage()">
@@ -45,7 +45,7 @@
               />
             </td>
             <td>{{ product.productName }}</td>
-            <td>{{ product.productCode | uppercase }}</td>
+            <td>{{ product.productCode | uppercase | convertToSpaces:'-' }}</td>
             <td>{{ product.releaseDate | date: 'mediumDate' }}</td>
             <td>{{ product.price | currency:'GBP':'symbol':'1.2-2'}}</td>
             <td>{{ product.starRating }}</td>
